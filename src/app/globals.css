@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0D1117] text-[#E2E8F0] font-['Poppins',_sans-serif] flex justify-center items-start min-h-screen p-10 overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 5% 5%, rgba(167, 139, 250, 0.25), transparent 30%),
+      radial-gradient(circle at 95% 95%, rgba(56, 189, 248, 0.25), transparent 35%);
+  }
+}
+@layer components {
+  .container { @apply w-full max-w-3xl bg-gray-800/75 backdrop-blur-lg rounded-2xl border-2 border-transparent p-10 flex flex-col gap-10 relative; background-clip: padding-box; border-image: linear-gradient(145deg, rgba(167, 139, 250, 0.8), rgba(56, 189, 248, 0.8)) 1; animation: pulse-shadow 4s infinite ease-in-out; }
+  .main-title { @apply text-4xl font-bold bg-gradient-to-r from-[#A78BFA] to-[#38BDF8] text-transparent bg-clip-text text-center; font-family: 'Space Grotesk', sans-serif; text-shadow: 0 0 10px rgba(167, 139, 250, 0.3); }
+  .subtitle { @apply text-lg text-[#94A3B8] mb-8 pb-4 border-b border-purple-500/20 text-center; }
+  .input-group { @apply mb-5; }
+  .input-group label { @apply block mb-2 font-semibold text-sm text-[#CBD5E1]; }
+  .input-group:focus-within label { @apply text-[#A78BFA]; }
+  .input-group input, .form-grid input { @apply w-full p-3 text-base text-[#E2E8F0] bg-black/20 border border-[#334155] rounded-lg transition-all duration-300; }
+  .input-group input:focus, .form-grid input:focus { @apply outline-none border-[#A78BFA] ring-2 ring-purple-400/30; }
+  .form-grid { @apply grid grid-cols-1 md:grid-cols-2 gap-5 mb-5; }
+  #generateBtn { @apply w-full mt-2 p-4 text-lg font-bold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg cursor-pointer shadow-lg transition-all duration-300; box-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
+  #generateBtn:hover:not(:disabled) { @apply transform -translate-y-1 scale-105; box-shadow: 0 0 25px rgba(168, 85, 247, 0.7); }
+  #generateBtn:disabled { @apply bg-[#4A5568] shadow-none cursor-not-allowed transform-none; }
+  .tabs { @apply flex border-b border-[#334155]; }
+  .tab-button { @apply py-2 px-5 cursor-pointer bg-none border-b-2 border-transparent text-[#94A3B8] text-base font-semibold transition-all duration-300; }
+  .tab-button:hover { @apply text-white; }
+  .tab-button.active { @apply text-[#60A5FA] border-[#60A5FA]; }
+  .tab-content { @apply pt-5; }
+  .tab-pane { @apply hidden; }
+  .tab-pane.active { @apply block; }
+  .output-content-text { @apply max-h-96 overflow-y-auto pr-3 text-sm leading-relaxed whitespace-pre-wrap; }
+  .output-actions { @apply mt-5 flex gap-4; }
+  .output-actions button { @apply flex-grow p-3 text-sm font-semibold rounded-lg cursor-pointer bg-gray-700/80 text-[#E2E8F0] border border-[#334155] transition-all duration-200; }
+  .output-actions button:hover { @apply border-[#60A5FA] bg-[#334155]; }
+  .output-actions button.primary { @apply bg-[#1D4ED8] border-transparent text-white; }
+  .output-actions button.primary:hover { @apply bg-[#2563EB]; }
+  .output-placeholder { @apply text-center text-[#94A3B8] border-2 border-dashed border-[#334155] p-10 rounded-xl min-h-[200px] flex items-center justify-center; }
+}
