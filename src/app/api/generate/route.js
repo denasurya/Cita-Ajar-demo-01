@@ -25,7 +25,7 @@ export async function POST(request) {
                 2.  5 Soal Esai Singkat untuk menguji pemahaman.
                 3.  Di akhir, sediakan Kunci Jawaban yang terpisah untuk semua soal tersebut.]
               
- PERMINTAAN GURU: Jenjang: ${body.jenjang?.toUpperCase()}, Kelas: ${body.kelas}, Mapel: ${body.mapel}, Topik: ${body.topik}, Pertemuan: ${body.pertemuan}. ${fokusPrompt}`;
+ PERMINTAAN GURU: Jenjang: ${body.jenjang?.toUpperCase()}, Kelas: ${body.kelas}, Mapel: ${body.mapel}, Topik: ${body.topik}, Banyak Pertemuan: ${body.pertemuan}. ${fokusPrompt}`;
   try {
     const response = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ parts: [{ text: fullPrompt }] }] }) });
     const data = await response.json();

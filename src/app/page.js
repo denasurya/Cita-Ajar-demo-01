@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="input-group"><label htmlFor="mapel">Mata Pelajaran</label><input id="mapel" placeholder="Contoh: IPAS,MATEMATIKA" value={form.mapel} onChange={handleInputChange} /></div>
         <div className="input-group"><label htmlFor="topik">Topik Utama</label><input id="topik" placeholder="Contoh: ALJABAR" value={form.topik} onChange={handleInputChange} /></div>
         <div className="input-group"><label htmlFor="fokusMateri">Fokus Materi (Opsional)</label><input id="fokusMateri" placeholder="Contoh: Fokus Pengenalan Aljabar" value={form.fokusMateri} onChange={handleInputChange} /></div>
-        <div className="input-group"><label htmlFor="pertemuan">Jumlah Pertemuan</label><input type="number" id="pertemuan" placeholder="isi dengan angka" value={form.pertemuan} onChange={handleInputChange} /></div>
+        <div className="input-group"><label htmlFor="pertemuan">Banyak Pertemuan</label><input type="number" id="pertemuan" placeholder="isi dengan angka" value={form.pertemuan} onChange={handleInputChange} /></div>
         <button id="generateBtn" onClick={handleGenerate} disabled={isLoading}>{isLoading ? 'Generating...' : 'Generate →'}</button>
       </div>
       <div id="output-area">
