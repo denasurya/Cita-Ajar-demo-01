@@ -1,2 +1,5 @@
 [functions]
-  timeout = 25
+  included_files = ["src/app/api/**"]
+
+[functions."*"]
+  timeout = 26
