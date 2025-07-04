@@ -1,5 +1,7 @@
-[functions]
-  included_files = ["src/app/api/**"]
+# Konfigurasi untuk fungsi 'generate'
+[functions.generate]
+  timeout = 26
 
-[functions."*"]
+# Konfigurasi untuk fungsi 'download-docx'
+[functions.download-docx]
   timeout = 26
