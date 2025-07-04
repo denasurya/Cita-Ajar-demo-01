@@ -17,7 +17,7 @@ export async function POST(request) {
                 [Pada bagian ini, berikan penjelasan materi secara mendalam tentang topik utama yang bisa menjadi bekal pembelajaran bagi guru. Jelaskan konsep-konsep kunci, berikan konteks Konteks dan Relevansi, dan sebutkan 3-5 potensi miskonsepsi atau kesulitan yang mungkin dihadapi siswa saat mempelajari topik ini. Jika ada fokus materi tambahan dari guru, jelaskan secara lebih detail di bagian ini.]
 
                 ## BAGIAN 2: MODUL AJAR LENGKAP
-                [Pada bagian ini, buatkan Modul Ajar yang lengkap dan terstruktur sesuai standar Kurikulum Merdeka di indonesia, dari Informasi Umum (Mata Pelajaran, Kelas/Fase, Topik, Alokasi Waktu, Model Pembelajaran, Penyusun, Institusi, Tahun Ajaran), kompetensi awal,profile pembelajaran pancasila, sarana dan prasarana, target peserta didik, model pembelajaran , Komponen Inti (Tujuan Pembelajaran,Pemahaman Bermakna, Pertanyaan Pemantik, Kegiatan Pembelajaran rinci per pertemuan, Asesmen, Pengayaan dan remidial, dan refleksi guru dan peserta didik)]
+                [Pada bagian ini, buatkan Modul Ajar yang lengkap dan terstruktur sesuai standar Kurikulum Merdeka di indonesia, dari Informasi Umum (Mata Pelajaran, Kelas/Fase, Topik, Alokasi Waktu, Model Pembelajaran, Penyusun, Institusi, Tahun Ajaran), kompetensi awal,profile pembelajaran pancasila, sarana dan prasarana, target peserta didik, model pembelajaran , Komponen Inti (Capaian Pembelajaran, Tujuan Pembelajaran, Pemahaman Bermakna, Pertanyaan Pemantik, Kegiatan Pembelajaran rinci per pertemuan, Asesmen, Pengayaan dan remidial, dan refleksi guru dan peserta didik)]
 
                 ## BAGIAN 3: BANK SOAL EVALUASI
                 [Pada bagian ini, buatkan bank soal untuk evaluasi siswa. Terdiri dari:
