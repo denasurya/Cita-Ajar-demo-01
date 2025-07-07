@@ -23,6 +23,13 @@
   #generateBtn { @apply w-full mt-2 p-4 text-lg font-bold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg cursor-pointer shadow-lg transition-all duration-300; box-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
   #generateBtn:hover:not(:disabled) { @apply transform -translate-y-1 scale-105; box-shadow: 0 0 25px rgba(168, 85, 247, 0.7); }
   #generateBtn:disabled { @apply bg-[#4A5568] shadow-none cursor-not-allowed transform-none; }
+  .tabs { 
+    @apply flex border-b border-[#334155] overflow-x-auto whitespace-nowrap;
+    /* Menambahkan 'overflow-x-auto' agar bisa di-scroll ke samping */
+    /* Menambahkan 'whitespace-nowrap' agar tombol tidak turun ke bawah */
+    -ms-overflow-style: none;  /* Menyembunyikan scrollbar di IE & Edge */
+    scrollbar-width: none;  /* Menyembunyikan scrollbar di Firefox */
+  }
   .tabs { @apply flex border-b border-[#334155]; }
   .tab-button { @apply py-2 px-5 cursor-pointer bg-none border-b-2 border-transparent text-[#94A3B8] text-base font-semibold transition-all duration-300; }
   .tab-button:hover { @apply text-white; }
