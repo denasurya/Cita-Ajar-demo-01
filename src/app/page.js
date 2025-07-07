@@ -21,7 +21,7 @@ export default function HomePage() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Gagal mengambil data dari server.');
       const parts = data.text.split(/##\s*BAGIAN\s*\d+.*?\n/);
-      setResult({ materi: parts[1] || "Konten materi tidak ditemukan.", modul: parts[2] || "Konten modul tidak ditemukan.", soal: parts[3] || "Konten soal tidak ditemukan." });
+      setResult({ materi: parts[1] || "Konten materi tidak ditemukan.", modul: parts[2] || "Konten modul tidak ditemukan.", soal: parts[3] || "Konten soal tidak ditemukan.", LKPD: parts[4] || "Konten LKPD tidak ditemukan." });
       setActiveTab('materi');
     } catch (err) { setError(err.message); } finally { setIsLoading(false); }
   };
@@ -91,6 +91,7 @@ export default function HomePage() {
               <button className={`tab-button ${activeTab === 'materi' && 'active'}`} onClick={() => setActiveTab('materi')}>Materi</button>
               <button className={`tab-button ${activeTab === 'modul' && 'active'}`} onClick={() => setActiveTab('modul')}>Modul Ajar</button>
               <button className={`tab-button ${activeTab === 'soal' && 'active'}`} onClick={() => setActiveTab('soal')}>Bank Soal</button>
+              <button className={`tab-button ${activeTab === 'LKPD' && 'active'}`} onClick={() => setActiveTab('LKPD')}>LKPD</button>
             </div>
             <div className="tab-content">
               {Object.keys(result).map(key => (

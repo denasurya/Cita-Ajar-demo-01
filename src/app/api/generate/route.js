@@ -11,7 +11,7 @@ export async function POST(request) {
                 Selalu hasilkan output dalam format Markdown yang jelas dan terstruktur dengan baik (gunakan heading, list, bold).
 
                 INSTRUKSI OUTPUT:
-                Harap hasilkan output dalam TIGA BAGIAN UTAMA yang jelas. Gunakan format ini PERSIS:
+                Harap hasilkan output dalam EMPAT BAGIAN UTAMA yang jelas. Gunakan format ini PERSIS:
                 
                 ## BAGIAN 1: MATERI PENGAYAAN GURU
                 [Pada bagian ini, berikan penjelasan materi secara mendalam tentang topik utama yang bisa menjadi bekal pembelajaran bagi guru. Jelaskan konsep-konsep kunci, berikan konteks Konteks dan Relevansi, dan sebutkan 3-5 potensi miskonsepsi atau kesulitan yang mungkin dihadapi siswa saat mempelajari topik ini. Jika ada fokus materi tambahan dari guru, jelaskan secara lebih detail di bagian ini.]
@@ -20,10 +20,26 @@ export async function POST(request) {
                 [Pada bagian ini, buatkan Modul Ajar yang lengkap dan terstruktur sesuai standar Kurikulum Merdeka di indonesia, dari Informasi Umum (Mata Pelajaran, Kelas/Fase, Topik, Alokasi Waktu, Model Pembelajaran, Penyusun, Institusi, Tahun Ajaran), kompetensi awal,profile pembelajaran pancasila, sarana dan prasarana, target peserta didik, model pembelajaran , Komponen Inti (Capaian Pembelajaran, Tujuan Pembelajaran, Pemahaman Bermakna, Pertanyaan Pemantik, Kegiatan Pembelajaran rinci per pertemuan, Asesmen, Pengayaan dan remidial, dan refleksi guru dan peserta didik)]
 
                 ## BAGIAN 3: BANK SOAL EVALUASI
-                [Pada bagian ini, buatkan bank soal untuk evaluasi siswa. Terdiri dari:
-                1.  10 Soal Pilihan Ganda (A, B, C, D) yang relevan dengan topik.
-                2.  5 Soal Esai Singkat untuk menguji pemahaman.
-                3.  Di akhir, sediakan Kunci Jawaban yang terpisah untuk semua soal tersebut.]
+               [Pada bagian ini, buatkan bank soal evaluasi yang berfokus pada kemampuan berpikir tingkat tinggi, literasi, dan numerasi siswa. Total ada 10 soal.
+
+                **A. Soal Berbasis Literasi (4 Soal Pilihan Ganda)**
+                Sajikan sebuah stimulus singkat (seperti kutipan teks, infografis, atau studi kasus) yang relevan dengan topik. Kemudian, buat 4 soal pilihan ganda (A, B, C, D) yang menguji kemampuan siswa dalam memahami, menganalisis, dan menyimpulkan informasi dari stimulus tersebut.
+
+                **B. Soal Berbasis Numerasi (3 Soal Pilihan Ganda)**
+                Jika relevan dengan topik, sajikan data, tabel, atau grafik sederhana. Buat 3 soal pilihan ganda (A, B, C, D) yang mengharuskan siswa untuk menginterpretasikan data atau menggunakan logika kuantitatif untuk menjawab. Jika topik tidak bersifat numerik, buat soal logika atau analisis kuantitas yang bisa dihubungkan dengan topik.
+
+                **C. Soal HOTS - Higher Order Thinking Skills (3 Soal Esai)**
+                Buat 3 soal esai yang menuntut siswa untuk melakukan salah satu dari hal berikut:
+              - **Menganalisis (C4):** Membandingkan dua konsep, menemukan penyebab masalah, atau menguraikan sebuah proses.
+              - **Mengevaluasi (C5):** Memberikan penilaian atau argumen terhadap sebuah kasus atau pernyataan, disertai dengan alasan yang logis.
+              - **Mencipta (C6):** Mengajukan sebuah solusi, merancang sebuah hipotesis, atau membuat sebuah konsep baru berdasarkan materi yang telah dipelajari.
+
+                **D. Kunci Jawaban**
+                Di bagian paling akhir, sediakan kunci jawaban yang jelas untuk seluruh soal pilihan ganda dan berikan contoh/poin-poin jawaban ideal untuk soal esai.]
+
+
+                ## BAGIAN 4: LKPD (LEMBAR KERJA PESERTA DIDIK)
+                [Pada bagian ini, Berdasarkan Modul Ajar, buatkan Lembar Kerja Peserta Didik (LKPD) yang siap cetak dan bisa langsung digunakan siswa.Wajib ada nama dan kelas yang harus di ini oleh siswa, Sertakan instruksi yang jelas, minimal 5 pertanyaan, atau aktivitas yang relevan.]
               
  PERMINTAAN GURU: Jenjang: ${body.jenjang?.toUpperCase()}, Kelas: ${body.kelas}, Mapel: ${body.mapel}, Topik: ${body.topik}, Banyak Pertemuan: ${body.pertemuan}. ${fokusPrompt}`;
   try {
