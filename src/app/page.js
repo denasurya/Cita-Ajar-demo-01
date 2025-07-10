@@ -5,7 +5,7 @@ import { marked } from 'marked';
 // TIDAK ADA impor library download di sini untuk menjaga stabilitas
 
 export default function HomePage() {
-  const [form, setForm] = useState({ jenjang: '', kelas: '', mapel: '', topik: '', fokusMateri: '', pertemuan: '' });
+  const [form, setForm] = useState({ jenjang: '', kelas: '', mapel: '', topik: '', fokusMateri: '', pertemuan: '', jp: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
@@ -80,6 +80,7 @@ export default function HomePage() {
         <div className="input-group"><label htmlFor="topik">Topik Utama</label><input id="topik" placeholder="Contoh: ALJABAR" value={form.topik} onChange={handleInputChange} /></div>
         <div className="input-group"><label htmlFor="fokusMateri">Fokus Materi (Opsional)</label><input id="fokusMateri" placeholder="Contoh: Fokus Pengenalan Aljabar" value={form.fokusMateri} onChange={handleInputChange} /></div>
         <div className="input-group"><label htmlFor="pertemuan">Banyak Pertemuan</label><input type="number" id="pertemuan" placeholder="isi dengan angka" value={form.pertemuan} onChange={handleInputChange} /></div>
+        <div className="input-group"><label htmlFor="jp">JP per Pertemuan</label><input type="number" id="jp" placeholder="Contoh: 2, 3, atau 4" value={form.jp} onChange={handleInputChange} /></div>
         <button id="generateBtn" onClick={handleGenerate} disabled={isLoading}>{isLoading ? 'Generating...' : 'Generate →'}</button>
       </div>
       <div id="output-area">
